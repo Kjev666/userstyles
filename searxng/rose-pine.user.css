@@ -1,0 +1,336 @@
+/* ==UserStyle==
+@name           Rosé Pine for SearXNG
+@description    Soho vibes for SearXNG
+@version        1.0.0
+@license 		    MIT
+@author         Kjev (https://github.com/Kjev)
+@namespace      https://github.com/rose-pine/
+@homepageURL    https://github.com/rose-pine/userstyles/
+@updateURL      https://rosepinetheme.com/
+
+@preprocessor less
+@var select lightFlavor "Light Flavor" ["dawn:Rosé Pine Dawn*", "moon:Rosé Pine Moon", "rosepine:Rosé Pine"]
+@var select darkFlavor "Dark Flavor" ["dawn:Rosé Pine Dawn", "moon:Rosé Pine Moon", "rosepine:Rosé Pine*"]
+@var select accentColor "Accent" ["love:Love", "gold:Gold", "rose:Rose", "pine:Pine", "foam:Foam", "iris:Iris*"]
+@var checkbox additions "Additional Tweaks" 0
+==/UserStyle== */
+
+@-moz-document url-prefix("http://ransack.i2p/"),
+url-prefix("https://darmarit.org/searx/"),
+url-prefix("https://de.xcxc.ml/"),
+url-prefix("https://dynabyte.ca/"),
+url-prefix("https://etsi.me/"),
+url-prefix("https://icanfindit.online/"),
+url-prefix("https://jackgoss.xyz/"),
+url-prefix("https://jsearch.pw/"),
+url-prefix("https://metasearch.nl/"),
+url-prefix("https://northboot.xyz/"),
+url-prefix("https://notsearch.uk/"),
+url-prefix("https://opnxng.com/"),
+url-prefix("https://paulgo.io/"),
+url-prefix("https://priv.au/"),
+url-prefix("https://privatus.live/"),
+url-prefix("https://s.frlt.one/"),
+url-prefix("https://s.zhaocloud.net/"),
+url-prefix("https://saber.tk/"),
+url-prefix("https://search.0relay.com/"),
+url-prefix("https://search.affusio.com/"),
+url-prefix("https://search.bus-hit.me/"),
+url-prefix("https://search.callmeecho.dev/"),
+url-prefix("https://search.chemicals-in-the-water.eu/"),
+url-prefix("https://search.cronobox.one/"),
+url-prefix("https://search.disroot.org/"),
+url-prefix("https://search.ethibox.fr/"),
+url-prefix("https://search.gcomm.ch/"),
+url-prefix("https://search.kiwitalk.de/"),
+url-prefix("https://search.mdosch.de/"),
+url-prefix("https://search.mpx.wtf/"),
+url-prefix("https://search.neet.works/"),
+url-prefix("https://search.ononoki.org/"),
+url-prefix("https://search.privacyguides.net/"),
+url-prefix("https://search.projectsegfau.lt/"),
+url-prefix("https://search.rabbit-company.com/"),
+url-prefix("https://search.rhscze.cf/"),
+url-prefix("https://search.rowie.at/"),
+url-prefix("https://search.sapti.me/"),
+url-prefix("https://search.serginho.dev/"),
+url-prefix("https://search.smnz.de/"),
+url-prefix("https://search.snopyta.org/"),
+url-prefix("https://search.stinpriza.org/"),
+url-prefix("https://search.teamriverbubbles.com/"),
+url-prefix("https://search.trom.tf/"),
+url-prefix("https://search.unlocked.link/"),
+url-prefix("https://search.uspersec.com/"),
+url-prefix("https://search.vidhukant.xyz/"),
+url-prefix("https://search.zzls.xyz/"),
+url-prefix("https://searx.baczek.me/"),
+url-prefix("https://searx.be/"),
+url-prefix("https://searx.becomesovran.com/"),
+url-prefix("https://searx.bissisoft.com/"),
+url-prefix("https://searx.chocoflan.net/"),
+url-prefix("https://searx.divided-by-zero.eu/"),
+url-prefix("https://searx.dresden.network/"),
+url-prefix("https://searx.ebnar.xyz/"),
+url-prefix("https://searx.ericaftereric.top/"),
+url-prefix("https://searx.esmailelbob.xyz/"),
+url-prefix("https://searx.fi/"),
+url-prefix("https://searx.fmac.xyz/"),
+url-prefix("https://searx.fossencdi.org/"),
+url-prefix("https://searx.gnous.eu/"),
+url-prefix("https://searx.gnu.style/"),
+url-prefix("https://searx.kujonello.cf/"),
+url-prefix("https://searx.mastodontech.de/"),
+url-prefix("https://searx.mha.fi/"),
+url-prefix("https://searx.mistli.net/"),
+url-prefix("https://searx.mxchange.org/"),
+url-prefix("https://searx.nakhan.net/"),
+url-prefix("https://searx.namejeff.xyz/"),
+url-prefix("https://searx.netzspielplatz.de/"),
+url-prefix("https://searx.nixnet.services/"),
+url-prefix("https://searx.org/"),
+url-prefix("https://searx.orion-hub.fr/"),
+url-prefix("https://searx.priv.pw/"),
+url-prefix("https://searx.prvcy.eu/"),
+url-prefix("https://searx.rimkus.it/"),
+url-prefix("https://searx.roflcopter.fr/"),
+url-prefix("https://searx.ru/"),
+url-prefix("https://searx.run/"),
+url-prefix("https://searx.semipvt.com/"),
+url-prefix("https://searx.sethforprivacy.com/"),
+url-prefix("https://searx.sev.monster/"),
+url-prefix("https://searx.slipfox.xyz/searx/"),
+url-prefix("https://searx.sp-codes.de/"),
+url-prefix("https://searx.stuehieyr.com/"),
+url-prefix("https://searx.tiekoetter.com/"),
+url-prefix("https://searx.tuxcloud.net/"),
+url-prefix("https://searx.tyil.nl/"),
+url-prefix("https://searx.vanwa.tech/"),
+url-prefix("https://searx.webheberg.info/"),
+url-prefix("https://searx.xyz/"),
+url-prefix("https://searx.zapashcanon.fr/"),
+url-prefix("https://searx.zcyph.cc/"),
+url-prefix("https://searxng.ir/"),
+url-prefix("https://searxng.nicfab.eu/"),
+url-prefix("https://searxng.zackptg5.com/"),
+url-prefix("https://serx.ml/"),
+url-prefix("https://sh0.it/"),
+url-prefix("https://soek.allesbeste.com/"),
+url-prefix("https://spot.ecloud.global/"),
+url-prefix("https://srx.cosmohub.io/"),
+url-prefix("https://searx.oakleycord.dev/"),
+url-prefix("https://suche.dasnetzundich.de/"),
+url-prefix("https://suche.tromdienste.de/"),
+url-prefix("https://suche.uferwerk.org/"),
+url-prefix("https://swag.pw/"),
+url-prefix("https://sx.catgirl.cloud/"),
+url-prefix("https://timdor.noip.me/searx/"),
+url-prefix("https://trydex.tk/searxng/"),
+url-prefix("https://www.gruble.de/"),
+url-prefix("https://www.webrats.xyz/"),
+url-prefix("https://xcxc.ml/"),
+url-prefix("https://xo.wtf/")
+{
+  @rosepine: {
+    @dawn: {
+      @love: #b4637a;
+      @gold: #ea9d34;
+      @rose: #d7827e;
+      @pine: #286983;
+      @foam: #56949f;
+      @iris: #907aa9;
+      @text: #575279;
+      @subtle: #797593;
+      @muted: #9893a5;
+      @hl-low: #f4ede8;
+      @hl-med: #dfdad9;
+      @hl-high: #cecacd;
+      @overlay: #f2e9e1;
+      @surface: #fffaf3;
+      @base: #faf4ed;
+    };
+    @moon: {
+      @love: #eb6f92;
+      @gold: #f6c177;
+      @rose: #ea9a97;
+      @pine: #3e8fb0;
+      @foam: #9ccfd8;
+      @iris: #c4a7e7;
+      @text: #e0def4;
+      @subtle: #908caa;
+      @muted: #6e6a86;
+      @hl-low: #2a283e;
+      @hl-med: #44415a;
+      @hl-high: #56526e;
+      @overlay: #393552;
+      @surface: #2a273f;
+      @base: #232136;
+    };
+    @rosepine: {
+      @love: #eb6f92;
+      @gold: #f6c177;
+      @rose: #ebbcba;
+      @pine: #31748f;
+      @foam: #9ccfd8;
+      @iris: #c4a7e7;
+      @text: #e0def4;
+      @subtle: #908caa;
+      @muted: #6e6a86;
+      @hl-low: #21202e;
+      @hl-med: #403d52;
+      @hl-high: #524f67;
+      @overlay: #26233a;
+      @surface: #1f1d2e;
+      @base: #191724;
+    };
+  };
+
+  :root.theme-auto {
+    #rosepine(@lightFlavor, @accentColor);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root.theme-auto {
+      #rosepine(@darkFlavor, @accentColor);
+    }
+  }
+
+  :root.theme-dark {
+    #rosepine(@darkFlavor, @accentColor);
+  }
+  :root.theme-light {
+    #rosepine(@lightFlavor, @accentColor);
+  }
+
+  #rosepine(@lookup, @accent-color) {
+    @love: @rosepine[@@lookup][@love];
+    @gold: @rosepine[@@lookup][@gold];
+    @rose: @rosepine[@@lookup][@rose];
+    @pine: @rosepine[@@lookup][@pine];
+    @foam: @rosepine[@@lookup][@foam];
+    @iris: @rosepine[@@lookup][@iris];
+    @text: @rosepine[@@lookup][@text];
+    @subtle: @rosepine[@@lookup][@subtle];
+    @muted: @rosepine[@@lookup][@muted];
+    @hl-low: @rosepine[@@lookup][@hl-low];
+    @hl-med: @rosepine[@@lookup][@hl-med];
+    @hl-high: @rosepine[@@lookup][@hl-high];
+    @overlay: @rosepine[@@lookup][@overlay];
+    @surface: @rosepine[@@lookup][@surface];
+    @base: @rosepine[@@lookup][@base];
+    @accent: @rosepine[@@lookup][@@accent-color];
+
+    & {
+      --color-base-font: @text;
+      --color-base-background: @surface;
+      --color-base-background-mobile: @surface;
+      --color-url-font: @accent;
+      --color-url-visited-font: @accent;
+      --color-header-background: @base;
+      --color-header-border: @base;
+      --color-footer-background: @base;
+      --color-footer-border: @base;
+      --color-sidebar-border: @surface;
+      --color-sidebar-font: @text;
+      --color-sidebar-background: @surface;
+      --color-backtotop-font: @subtle;
+      --color-backtotop-border: @hl-med;
+      --color-backtotop-background: @hl-med;
+      --color-btn-background: @accent;
+      --color-btn-font: @surface;
+      --color-show-btn-background: @accent;
+      --color-show-btn-font: @surface;
+      --color-search-border: @hl-med;
+      --color-search-shadow: 0 2px 8px @base;
+      --color-search-background: @hl-med;
+      --color-search-font: @text;
+      --color-search-background-hover: @accent;
+      --color-error: @love;
+      --color-error-background: @hl-med;
+      --color-warning: @gold;
+      --color-warning-background: @hl-med;
+      --color-success: @foam;
+      --color-success-background: @hl-med;
+      --color-categories-item-selected-font: @text;
+      --color-categories-item-border-selected: @accent;
+      --color-autocomplete-font: @subtle;
+      --color-autocomplete-border: @hl-med;
+      --color-autocomplete-shadow: 0 2px 8px @base;
+      --color-autocomplete-background: @hl-med;
+      --color-autocomplete-background-hover: @hl-med;
+      --color-answer-font: @text;
+      --color-answer-background: @base;
+      --color-result-background: @base;
+      --color-result-border: @surface;
+      --color-result-url-font: @subtle;
+      --color-result-vim-selected: @hl-med;
+      --color-result-vim-arrow: @accent;
+      --color-result-description-highlight-font: @text;
+      --color-result-link-font: @accent;
+      --color-result-link-font-highlight: @accent;
+      --color-result-link-visited-font: @accent;
+      --color-result-publishdate-font: @hl-med;
+      --color-result-engines-font: @hl-med;
+      --color-result-search-url-border: @hl-med;
+      --color-result-search-url-font: @text;
+      --color-result-detail-font: @text;
+      --color-result-detail-label-font: @hl-med;
+      --color-result-detail-background: @surface;
+      --color-result-detail-hr: @surface;
+      --color-result-detail-link: @accent;
+      --color-result-detail-loader-border: rgba(255, 255, 255, 0.2);
+      --color-result-detail-loader-borderleft: @base;
+      --color-result-image-span-font: @text;
+      --color-result-image-span-font-selected: @surface;
+      --color-result-image-background: @base;
+      --color-settings-tr-hover: @hl-med;
+      --color-settings-engine-description-font: @text;
+      --color-settings-engine-group-background: @hl-med;
+      --color-toolkit-badge-font: @text;
+      --color-toolkit-badge-background: @hl-med;
+      --color-toolkit-kbd-font: @text;
+      --color-toolkit-kbd-background: @base;
+      --color-toolkit-dialog-border: @base;
+      --color-toolkit-dialog-background: @base;
+      --color-toolkit-tabs-label-border: @surface;
+      --color-toolkit-tabs-section-border: @surface;
+      --color-toolkit-select-background: @hl-med;
+      --color-toolkit-select-border: @hl-med;
+      --color-toolkit-select-background-hover: @hl-med;
+      --color-toolkit-input-text-font: @text;
+      --color-toolkit-checkbox-onoff-off-background: @hl-med;
+      --color-toolkit-checkbox-onoff-on-background: @hl-med;
+      --color-toolkit-checkbox-onoff-on-mark-background: @foam;
+      --color-toolkit-checkbox-onoff-on-mark-color: @base;
+      --color-toolkit-checkbox-onoff-off-mark-background: @love;
+      --color-toolkit-checkbox-onoff-off-mark-color: @base;
+      --color-toolkit-checkbox-label-background: @surface;
+      --color-toolkit-checkbox-label-border: @base;
+      --color-toolkit-checkbox-input-border: @accent;
+      --color-toolkit-engine-tooltip-border: @hl-med;
+      --color-toolkit-engine-tooltip-background: @hl-med;
+      --color-toolkit-loader-border: rgba(255, 255, 255, 0.2);
+      --color-toolkit-loader-borderleft: @base;
+      --color-doc-code: @iris;
+      --color-doc-code-background: @base;
+    }
+
+    #search_logo svg :not([fill="none"]) {
+      fill: @accent;
+    }
+    #search_logo svg :not([stroke="none"]) {
+      stroke: @accent;
+    }
+
+    if (additions) {
+      article.result {
+        background-color: var(--color-result-background);
+        border-radius: 0.75em;
+        padding: 0.75em;
+        margin: 0.5em;
+      }
+      article.category-images {
+        padding-bottom: 4em;
+      }
+    }
+  }
+}
